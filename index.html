@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="IE-Edge">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge">
     <meta name="description" content="The best shop with plants on the internet!">
     <meta name="author" content="XYZ">
     <meta name="keywords" content="greenharvest, plants, harvesting, shop, greenshop, green">
@@ -13,7 +13,31 @@
 </head>
 
 <body>
-
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo header__container">
+                <img class="logo__img header_logo-img" src="/svg/Logo.svg" alt="logo image">
+                <h1 class="logo__h1 header__logo-h1 ">GreenHarvest</h1>
+            </div>
+            <p class="header__welcome-back">Welcome back</p>
+        </header>
+        <main class="main-interface">
+            <button class="button main-interface__button-log-in-with-google">Log in with Google</button>
+            <p class="main-inteface__option">or login with email</p>
+            <form class="main-interface__form" action="#">
+                <label for="email" class="main-inteface__email-label">Email</label>
+                <input type="email" class="main-interface__email-input" placeholder="Your email address" required>
+                <label for="password" class="main-inteface__password-label">Password</label>
+                <input type="email" class="main-interface__password-input" placeholder="Your password" required>
+            </form>
+            <input type="checkbox" class="main-interface-checkbox">
+            <p class="main-interface__keep-logged-in">Keep me logged in</p>
+            <a href="#" class="main-interface__forgot-password"><p>Forgot your password?</p></a>
+            <button class="button main-interface__button-log-in button--log-in">Log in</button>
+            <p class="main-interface__sign-up">Don't have an account?
+                <a href="#" class="main-interface_sign-up__highlighted">Sign up!</a></p>
+        </main>
+    </div>
 </body>
 
 </html>
