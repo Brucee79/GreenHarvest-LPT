@@ -1,0 +1,30 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 65px 0 31px 0;
+
+    &__img {
+        height: 40px;
+        width: 33px;
+        // margin: 58px 0 26px 66px;
+    }
+
+    &__h1 {
+        font-size: 18px;
+        line-height: 22px;
+        // margin: 65px 53px 31px 0;
+    }
+}
+
+.header {
+    // border: 2px solid black;
+    margin-bottom: 23px;
+
+    &__welcome-back {
+        font-size: 36px;
+        color: #4D4D4D;
+        text-align: center;
+        line-height: 45px;
+    }
+}

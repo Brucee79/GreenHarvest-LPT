@@ -1,0 +1,16 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 65px 0 31px 0;
+
+    &__img {
+        height: 40px;
+        width: 33px;
+    }
+
+    &__h1 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

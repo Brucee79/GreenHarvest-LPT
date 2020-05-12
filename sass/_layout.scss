@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #029348 0%, #017439 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1,
+p {
+    font-weight: normal;
+    font-style: normal;
+    font-family: Righteous;
+}
+
+.wrapper {
+    height: 548px;
+    width: 295px;
+    background-color: #FFF;
+}
