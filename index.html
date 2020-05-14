@@ -26,24 +26,28 @@
             <button class="button main-interface__button-log-in-with-google">
                 <p class="main-interface__button-log-in-with-google__text">Log in with Google</p>
             </button>
-            <div class="vector main-interface__vector"></div>
-            <p class="main-inteface__option">or login with email</p>
-            <div class="vector main-interface__vector"></div>
+            <div class="main-interface__container">
+                <div class="vector main-interface__vector vector--left"></div>
+                <p class="main-interface__option">or login with email</p>
+                <div class="vector main-interface__vector vector--right"></div>
+            </div>
             <form class="main-interface__form" action="#">
-                <label for="email" class="main-inteface__email-label">Email</label>
-                <input type="email" class="main-interface__email-input" placeholder="Your email address" required>
-                <label for="password" class="main-inteface__password-label">Password</label>
-                <input type="email" class="main-interface__password-input" placeholder="Your password" required>
+                <label for="email" class="label main-interface__email-label">Email</label>
+                <input type="email" class="input main-interface__email-input" required>
+                <label for="password" class="label main-interface__password-label">Password</label>
+                <input type="email" class="input main-interface__password-input" required>
             </form>
-            <input type="checkbox" class="main-interface-checkbox">
-            <p class="main-interface__keep-logged-in">Keep me logged in</p>
-            <a href="#" class="main-interface__forgot-password"><p>Forgot your password?</p></a>
+            <div class="main-interface__helper">
+                <input type="checkbox" class="main-interface__checkbox">
+                <p class="main-interface__keep-logged-in">Keep me logged in</p>
+                <a href="#" class="main-interface__forgot-password"><p>Forgot your password?</p></a>
+            </div>
             <button class="button main-interface__button-log-in button--log-in">
                 <p class="main-interface__button-log-in__text">Log in</p>
             </button>
-            <div class="vector main-interface__vector"></div>
+            <div class="vector main-interface__vector vector--long"></div>
             <p class="main-interface__sign-up">Don't have an account?
-                <a href="#" class="main-interface_sign-up__highlighted">Sign up!</a></p>
+                <a href="#" class="main-interface__sign-up__highlighted">Sign up!</a></p>
         </main>
     </div>
 </body>

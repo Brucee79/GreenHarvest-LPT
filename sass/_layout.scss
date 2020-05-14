@@ -13,14 +13,16 @@ body {
 }
 
 h1,
-p {
+p,
+label {
     font-weight: normal;
     font-style: normal;
-    font-family: Righteous;
+    font-family: 'Righteous', cursive,
+        sans-serif;
 }
 
 .wrapper {
     height: 548px;
     width: 295px;
-    background-color: #FFF;
+    background-color: $bgcColor;
 }
