@@ -20,16 +20,17 @@
     &__option {
         color: $fontColor;
         font-size: 8px;
-        line-height: 10px;
+        text-transform: uppercase;
     }
 
     &__container {
         display: flex;
         align-items: center;
+        margin-top: 11px;
     }
 
     &__email-label {
-        margin-left: 35px;
+        margin-top: 8px;
         margin-bottom: 3px;
     }
 
@@ -45,8 +46,7 @@
         border-radius: 5px;
         width: 215px;
         height: 34px;
-        margin-left: 35px;
-        margin-right: 46px;
+        padding-left: 10px;
     }
 
     &__helper {
@@ -58,7 +58,7 @@
     &__checkbox {
         border: $borderProperties;
         border-radius: 4px;
-        margin-right: 4px;
+        margin-right: 3px;
         margin-bottom: 4px;
         margin-top: 14px;
     }
@@ -76,9 +76,12 @@
         text-decoration: none;
         font-size: 8px;
         line-height: 10px;
-        color: #EC6969;
         margin-bottom: 1px;
         margin-top: 14px;
+
+        &__text {
+            color: #EC6969;
+        }
     }
 
     &__button-log-in {
@@ -108,7 +111,6 @@
 .label {
     display: block;
     width: 100%;
-    margin-left: 35px;
     font-size: 14px;
     line-height: 17px;
 }
@@ -116,14 +118,14 @@
 .vector {
     border: 1px solid #E1E1E1;
     height: 0px;
-    width: 76px;
+    width: 65px;
 
     &--left {
-        margin: 16px 2px 11px 0;
+        margin-right: 2px;
     }
 
     &--right {
-        margin: 16px 0 11px 2px;
+        margin-left: 2px;
     }
 
     &--long {
