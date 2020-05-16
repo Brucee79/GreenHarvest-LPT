@@ -28,3 +28,30 @@
         line-height: 45px;
     }
 }
+
+@media (orientation: landscape) {
+    .logo {
+        margin: 0;
+
+        &__img {
+            margin-top: 25px;
+            width: 63px;
+            height: 85px;
+        }
+
+        &__h1 {
+            margin-top: 47px;
+            font-size: 27px;
+            height: 60px;
+        }
+    }
+
+    .header {
+        margin-bottom: 8px;
+
+        &__welcome-back {
+            font-size: 64px;
+            line-height: 79px;
+        }
+    }
+}
