@@ -194,6 +194,10 @@
   padding-left: 10px;
 }
 
+.main-interface__floating-label-email, .main-interface__floating-label-password {
+  display: none;
+}
+
 .main-interface__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,6 +251,10 @@
   font-size: 14px;
   line-height: 17px;
   color: #FFF;
+}
+
+.main-interface__checkbox:checked + .main-interface__keep-logged-in {
+  color: green;
 }
 
 .main-interface__sign-up {
@@ -306,7 +314,100 @@
   .main-interface__email-input, .main-interface__password-input {
     width: 416px;
     height: 71px;
-    padding-left: 20px;
+    padding-left: 14px;
+    padding-top: 10px;
+  }
+  .main-interface__box-email {
+    position: relative;
+  }
+  .main-interface__box-password {
+    position: relative;
+  }
+  .main-interface__email-input:focus ~ .main-interface__floating-label-email,
+  .main-interface__password-input:focus ~ .main-interface__floating-label-password {
+    top: 30%;
+    left: 3.5%;
+    font-family: 'Righteous', cursive, sans-serif;
+    font-weight: normal;
+    color: #4D4D4D;
+    font-size: 16px;
+  }
+  .main-interface__email-input:not(:focus):valid ~ .main-interface__floating-label-email,
+  .main-interface__password-input:not(:focus):valid ~ .main-interface__floating-label-password {
+    top: 30%;
+    left: 3.5%;
+    font-family: 'Righteous', cursive, sans-serif;
+    font-weight: normal;
+    color: #4D4D4D;
+    font-size: 16px;
+  }
+  .main-interface__floating-label-email {
+    display: inline-block;
+    position: absolute;
+    top: 52%;
+    left: 4.5%;
+    font-size: 14px;
+    font-family: 'Righteous', cursive, sans-serif;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .main-interface__floating-label-password {
+    display: inline-block;
+    position: absolute;
+    top: 52%;
+    left: 4.5%;
+    font-size: 14px;
+    font-family: 'Righteous', cursive, sans-serif;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  @-webkit-keyframes floatingTablesEmail {
+    0% {
+    }
+    100% {
+      top: 30%;
+      left: 3.5%;
+      font-family: 'Righteous', cursive, sans-serif;
+      font-weight: normal;
+      color: #4D4D4D;
+      font-size: 16px;
+    }
+  }
+  @keyframes floatingTablesEmail {
+    0% {
+    }
+    100% {
+      top: 30%;
+      left: 3.5%;
+      font-family: 'Righteous', cursive, sans-serif;
+      font-weight: normal;
+      color: #4D4D4D;
+      font-size: 16px;
+    }
+  }
+  @-webkit-keyframes floatingTablesPassword {
+    0% {
+    }
+    100% {
+      top: 30%;
+      left: 3.5%;
+      font-family: 'Righteous', cursive, sans-serif;
+      font-weight: normal;
+      color: #4D4D4D;
+      font-size: 16px;
+    }
+  }
+  @keyframes floatingTablesPassword {
+    0% {
+    }
+    100% {
+      top: 30%;
+      left: 3.5%;
+      font-family: 'Righteous', cursive, sans-serif;
+      font-weight: normal;
+      color: #4D4D4D;
+      font-size: 16px;
+    }
   }
   .main-interface__checkbox {
     width: 18px;

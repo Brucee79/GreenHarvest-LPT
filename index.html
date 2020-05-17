@@ -33,12 +33,16 @@
                     <div class="vector main-interface__vector vector--right"></div>
                 </div>
                 <form class="main-interface__form" action="#">
-                    <label for="email" class="text label main-interface__email-label">Email</label>
-                    <input type="email" class="input main-interface__email-input" required
-                        placeholder="Your email address">
-                    <label for="password" class="text label main-interface__password-label">Password</label>
-                    <input type="password" class="input main-interface__password-input" required
-                        placeholder="Your password">
+                    <div class="main-interface__box-email">
+                        <label for="email" class="text label main-interface__email-label">Email</label>
+                        <input type="text" class="input main-interface__email-input" required>
+                        <span class="main-interface__floating-label-email">Your email address</span>
+                    </div>
+                    <div class="main-interface__box-password">
+                        <label for="password" class="text label main-interface__password-label">Password</label>
+                        <input type="password" class="input main-interface__password-input" required>
+                        <span class="main-interface__floating-label-password">Your password</span>
+                    </div>
                 </form>
                 <div class="main-interface__box">
                     <input type="checkbox" class="main-interface__checkbox">
