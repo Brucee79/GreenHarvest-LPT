@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-body {
+.background {
   background: -webkit-gradient(linear, left top, left bottom, from(#029348), to(#017439));
   background: linear-gradient(180deg, #029348 0%, #017439 100%);
   min-height: 100vh;
@@ -19,12 +19,9 @@ body {
           align-items: center;
 }
 
-h1,
-p,
-label {
-  font-weight: normal;
-  font-style: normal;
+.text {
   font-family: 'Righteous', cursive, sans-serif;
+  font-weight: normal;
   color: #4D4D4D;
 }
 
@@ -42,17 +39,12 @@ label {
     display: -ms-flexbox;
     display: flex;
   }
-  .left {
+  .wrapper__left {
     width: 622px;
   }
-  .right {
+  .wrapper__right {
     width: 860px;
     height: 500px;
-  }
-  .right .aside__flower {
-    display: block;
-    height: 746px;
-    width: 860px;
   }
 }
 
@@ -79,15 +71,8 @@ label {
   line-height: 22px;
 }
 
-.header {
-  margin-bottom: 23px;
-}
-
-.header__welcome-back {
-  font-size: 36px;
-  color: #4D4D4D;
-  text-align: center;
-  line-height: 45px;
+.logo:hover {
+  cursor: pointer;
 }
 
 @media (orientation: landscape) {
@@ -104,6 +89,20 @@ label {
     font-size: 27px;
     height: 60px;
   }
+}
+
+.header {
+  margin-bottom: 23px;
+}
+
+.header__welcome-back {
+  font-size: 36px;
+  color: #4D4D4D;
+  text-align: center;
+  line-height: 45px;
+}
+
+@media (orientation: landscape) {
   .header {
     margin-bottom: 8px;
   }
@@ -119,6 +118,10 @@ label {
   border-radius: 5px;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 @media (orientation: landscape) {
@@ -144,6 +147,10 @@ label {
 .main-interface__button-log-in-with-google {
   background: #FFF;
   border: 1px solid #E1E1E1;
+}
+
+.main-interface__button-log-in-with-google:hover {
+  cursor: pointer;
 }
 
 .main-interface__button-log-in-with-google__text {
@@ -187,7 +194,7 @@ label {
   padding-left: 10px;
 }
 
-.main-interface__helper {
+.main-interface__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,6 +209,10 @@ label {
   margin-right: 3px;
   margin-bottom: 4px;
   margin-top: 14px;
+}
+
+.main-interface__checkbox:hover {
+  cursor: pointer;
 }
 
 .main-interface__keep-logged-in {
@@ -245,7 +256,7 @@ label {
 }
 
 .main-interface__sign-up__highlighted {
-  color: red;
+  color: #EC6969;
   text-decoration: none;
 }
 
@@ -315,8 +326,8 @@ label {
   }
   .main-interface__forgot-password {
     text-decoration: none;
-    line-height: 17px;
     font-size: 14px;
+    line-height: 17px;
     margin-top: 18px;
   }
   .main-interface__button-log-in {
@@ -333,7 +344,7 @@ label {
     color: #999;
   }
   .main-interface__sign-up__highlighted {
-    color: red;
+    color: #EC6969;
     text-decoration: none;
   }
   .label {
@@ -356,5 +367,13 @@ label {
 
 .aside__flower {
   display: none;
+}
+
+@media (orientation: landscape) {
+  .aside__flower {
+    display: block;
+    height: 746px;
+    width: 860px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

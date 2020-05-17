@@ -1,3 +1,11 @@
 .aside__flower {
     display: none;
 }
+
+@media (orientation: landscape) {
+    .aside__flower {
+        display: block;
+        height: 746px;
+        width: 860px;
+    }
+}

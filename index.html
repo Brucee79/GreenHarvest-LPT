@@ -13,49 +13,50 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="background">
     <div class="wrapper">
-        <div class="left">
+        <div class="wrapper__left">
             <header class="header">
                 <div class="logo header__container">
                     <img class="logo__img header_logo-img" src="./svg/Logo.svg" alt="logo image">
-                    <h1 class="logo__h1 header__logo-h1 ">GreenHarvest</h1>
+                    <h1 class="text logo__h1 header__logo-h1 ">GreenHarvest</h1>
                 </div>
-                <p class="header__welcome-back">Welcome back</p>
+                <p class="text header__welcome-back">Welcome back</p>
             </header>
             <main class="main-interface">
                 <button class="button main-interface__button-log-in-with-google">
-                    <p class="main-interface__button-log-in-with-google__text">Log in with Google</p>
+                    <p class="text main-interface__button-log-in-with-google__text">Log in with Google</p>
                 </button>
                 <div class="main-interface__container">
                     <div class="vector main-interface__vector vector--left"></div>
-                    <p class="main-interface__option">or login with email</p>
+                    <p class="text main-interface__option">or login with email</p>
                     <div class="vector main-interface__vector vector--right"></div>
                 </div>
                 <form class="main-interface__form" action="#">
-                    <label for="email" class="label main-interface__email-label">Email</label>
+                    <label for="email" class="text label main-interface__email-label">Email</label>
                     <input type="email" class="input main-interface__email-input" required
                         placeholder="Your email address">
-                    <label for="password" class="label main-interface__password-label">Password</label>
+                    <label for="password" class="text label main-interface__password-label">Password</label>
                     <input type="password" class="input main-interface__password-input" required
                         placeholder="Your password">
                 </form>
-                <div class="main-interface__helper">
+                <div class="main-interface__box">
                     <input type="checkbox" class="main-interface__checkbox">
-                    <p class="main-interface__keep-logged-in">Keep me logged in</p>
-                    <a href="#" class="main-interface__forgot-password"><p class="main-interface__forgot-password__text">Forgot your password?</p></a>
+                    <p class="text main-interface__keep-logged-in">Keep me logged in</p>
+                    <a href="#" class="main-interface__forgot-password"><p class="text main-interface__forgot-password__text">Forgot your password?</p></a>
                 </div>
                 <button class="button main-interface__button-log-in button--log-in">
-                    <p class="main-interface__button-log-in__text">Log in</p>
+                    <p class="text main-interface__button-log-in__text">Log in</p>
                 </button>
                 <div class="vector main-interface__vector vector--long"></div>
-                <p class="main-interface__sign-up">Don't have an account?
-                    <a href="#" class="main-interface__sign-up__highlighted">Sign up!</a></p>
+                <p class="text main-interface__sign-up">Don't have an account?
+                    <a href="#" class="text main-interface__sign-up__highlighted">Sign up!</a></p>
             </main>
         </div>
-        <div class="right">
+        <div class="wrapper__right">
             <aside>
-                <img class="aside__flower" src="./svg/Flower.svg" alt="flower"></aside>
+                <img class="aside__flower" src="./svg/Flower.svg" alt="flower">
+            </aside>
         </div>
     </div>
 </body>

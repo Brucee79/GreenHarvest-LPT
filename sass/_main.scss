@@ -4,16 +4,16 @@
     align-items: center;
 
     &__button-log-in-with-google {
-        // display: inline-block;
         background: $bgcColor;
-        border: $borderProperties;
-        // margin: 0 35px 0 45px;
+        border: $borderPropertiesWhite;
 
+        &:hover {
+            cursor: pointer;
+        }
 
         &__text {
-            color: #4D4D4D;
-            font-size: 14px;
-            line-height: 17px;
+            color: $fontColorMain;
+            @include fontSizeAndLineHeight;
         }
     }
 
@@ -42,25 +42,28 @@
     &__email-input,
     &__password-input {
         background: $bgcColor;
-        border: $borderProperties;
+        border: $borderPropertiesWhite;
         border-radius: 5px;
         width: 215px;
         height: 34px;
         padding-left: 10px;
     }
 
-    &__helper {
+    &__box {
         display: flex;
         justify-content: flex-end;
-        // margin-top: 14px;
     }
 
     &__checkbox {
-        border: $borderProperties;
+        border: $borderPropertiesWhite;
         border-radius: 4px;
         margin-right: 3px;
         margin-bottom: 4px;
         margin-top: 14px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__keep-logged-in {
@@ -80,19 +83,18 @@
         margin-top: 14px;
 
         &__text {
-            color: #EC6969;
+            color: $fontHighlighted;
         }
     }
 
     &__button-log-in {
-        background: linear-gradient(180deg, #029348 0%, #017439 100%);
+        background: $greenGradient;
         border: none;
         margin-bottom: 15px;
 
         &__text {
-            font-size: 14px;
-            line-height: 17px;
-            color: #FFF;
+            @include fontSizeAndLineHeight;
+            color: $bgcColor;
         }
     }
 
@@ -102,7 +104,7 @@
         color: $fontColor;
 
         &__highlighted {
-            color: red;
+            color: $fontHighlighted;
             text-decoration: none;
         }
     }
@@ -111,12 +113,11 @@
 .label {
     display: block;
     width: 100%;
-    font-size: 14px;
-    line-height: 17px;
+    @include fontSizeAndLineHeight;
 }
 
 .vector {
-    border: 1px solid #E1E1E1;
+    border: 1px solid $vectorColor;
     height: 0px;
     width: 65px;
 
@@ -146,8 +147,7 @@
         }
 
         &__option {
-            font-size: 14px;
-
+            font-size: $fontSize;
         }
 
         &__container {
@@ -169,11 +169,11 @@
             padding-left: 20px;
         }
 
-        &__email-input[placeholder],
-        &__password-input[placeholder] {}
+        // &__email-input[placeholder],
+        // &__password-input[placeholder] {}
 
-        &__email-input[placeholder]:focus,
-        &__password-input[placeholder]:focus {}
+        // &__email-input[placeholder]:focus,
+        // &__password-input[placeholder]:focus {}
 
         &__checkbox {
             width: 18px;
@@ -186,8 +186,7 @@
         &__keep-logged-in {
             width: 236px;
             height: 17px;
-            font-size: 14px;
-            line-height: 17px;
+            @include fontSizeAndLineHeight;
             margin-bottom: 14px;
             margin-top: 19px;
             margin-right: 6px;
@@ -195,8 +194,7 @@
 
         &__forgot-password {
             text-decoration: none;
-            line-height: 17px;
-            font-size: 14px;
+            @include fontSizeAndLineHeight;
             margin-top: 18px;
         }
 
@@ -211,12 +209,11 @@
         }
 
         &__sign-up {
-            font-size: 14px;
-            line-height: 17px;
+            @include fontSizeAndLineHeight;
             color: $fontColor;
 
             &__highlighted {
-                color: red;
+                color: #EC6969;
                 text-decoration: none;
             }
         }
