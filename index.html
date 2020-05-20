@@ -1,68 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta
+      name="description"
+      content="The best shop with plants on the internet!"
+    />
+    <meta name="author" content="XYZ" />
+    <meta
+      name="keywords"
+      content="greenharvest, plants, harvesting, shop, greenshop, green"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      GreenHarvest
+    </title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="IE=Edge">
-    <meta name="description" content="The best shop with plants on the internet!">
-    <meta name="author" content="XYZ">
-    <meta name="keywords" content="greenharvest, plants, harvesting, shop, greenshop, green">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <title>GreenHarvest</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body class="background">
-    <div class="wrapper">
-        <div class="wrapper__left">
-            <header class="header">
-                <div class="logo header__container">
-                    <img class="logo__img header_logo-img" src="./svg/Logo.svg" alt="logo image">
-                    <h1 class="text logo__h1 header__logo-h1 ">GreenHarvest</h1>
-                </div>
-                <p class="text header__welcome-back">Welcome back</p>
-            </header>
-            <main class="main-interface">
-                <button class="button main-interface__button-log-in-with-google">
-                    <p class="text main-interface__button-log-in-with-google__text">Log in with Google</p>
-                </button>
-                <div class="main-interface__container">
-                    <div class="vector main-interface__vector vector--left"></div>
-                    <p class="text main-interface__option">or login with email</p>
-                    <div class="vector main-interface__vector vector--right"></div>
-                </div>
-                <form class="main-interface__form" action="#">
-                    <div class="main-interface__box-email">
-                        <label for="email" class="text label main-interface__email-label">Email</label>
-                        <input type="text" class="input main-interface__email-input" required>
-                        <span class="main-interface__floating-label-email">Your email address</span>
-                    </div>
-                    <div class="main-interface__box-password">
-                        <label for="password" class="text label main-interface__password-label">Password</label>
-                        <input type="password" class="input main-interface__password-input" required>
-                        <span class="main-interface__floating-label-password">Your password</span>
-                    </div>
-                </form>
-                <div class="main-interface__box">
-                    <input type="checkbox" class="main-interface__checkbox">
-                    <p class="text main-interface__keep-logged-in">Keep me logged in</p>
-                    <a href="#" class="main-interface__forgot-password"><p class="text main-interface__forgot-password__text">Forgot your password?</p></a>
-                </div>
-                <button class="button main-interface__button-log-in button--log-in">
-                    <p class="text main-interface__button-log-in__text">Log in</p>
-                </button>
-                <div class="vector main-interface__vector vector--long"></div>
-                <p class="text main-interface__sign-up">Don't have an account?
-                    <a href="#" class="text main-interface__sign-up__highlighted">Sign up!</a></p>
-            </main>
-        </div>
-        <div class="wrapper__right">
-            <aside>
-                <img class="aside__flower" src="./svg/Flower.svg" alt="flower">
-            </aside>
-        </div>
-    </div>
-</body>
-
+  <body class="background">
+    <section class="wrapper">
+      <section class="wrapper__rectangle-left">
+        <header class="header">
+          <section class="logo header__container">
+            <img
+              class="logo__img header_logo-img"
+              src="./assets/svg/Logo.svg"
+              alt="logo image"
+            />
+            <h1 class="text logo__h1 header__logo-h1">
+              GreenHarvest
+            </h1>
+          </section>
+          <p class="text header__welcome-back">
+            Welcome back
+          </p>
+        </header>
+        <main class="main-interface">
+          <button class="button main-interface__button-log-in-with-google">
+            <p class="text main-interface__button-log-in-with-google__text">
+              Log in with Google
+            </p>
+          </button>
+          <section class="main-interface__container">
+            <div class="vector main-interface__vector vector--left"></div>
+            <p class="text main-interface__option">
+              or login with email
+            </p>
+            <div class="vector main-interface__vector vector--right"></div>
+          </section>
+          <form class="main-interface__form" action="#">
+            <section class="main-interface__wrapper-email">
+              <span class="text label main-interface__email-span">
+                Email
+              </span>
+              <input
+                type="text"
+                id="email"
+                class="input main-interface__email-input"
+                required
+              />
+              <label for="email" class="main-interface__floating-label-email">
+                Your email address
+              </label>
+            </section>
+            <section class="main-interface__wrapper-password">
+              <span class="text label main-interface__password-span">
+                Password
+              </span>
+              <input
+                type="password"
+                id="password"
+                class="input main-interface__password-input"
+                required
+              />
+              <label
+                for="password"
+                class="main-interface__floating-label-password"
+              >
+                Your password
+              </label>
+            </section>
+          </form>
+          <section class="main-interface__options-wrapper">
+            <input type="checkbox" class="main-interface__checkbox" />
+            <p class="text main-interface__keep-logged-in">
+              Keep me logged in
+            </p>
+            <a href="#" class="main-interface__forgot-password">
+              <p class="text main-interface__forgot-password__text">
+                Forgot your password?
+              </p>
+            </a>
+          </section>
+          <button class="button main-interface__button-log-in button--log-in">
+            <p class="text main-interface__button-log-in__text">
+              Log in
+            </p>
+          </button>
+          <div class="vector main-interface__vector vector--long"></div>
+          <p class="text main-interface__sign-up">
+            Don't have an account?
+            <a href="#" class="text main-interface__sign-up__highlighted">
+              Sign up!
+            </a>
+          </p>
+        </main>
+      </section>
+      <section class="wrapper__rectangle-right">
+        <aside>
+          <img
+            class="aside__flower"
+            src="./assets/svg/Flower.svg"
+            alt="flower"
+          />
+        </aside>
+      </section>
+    </section>
+  </body>
 </html>

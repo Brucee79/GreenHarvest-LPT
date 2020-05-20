@@ -1,345 +1,331 @@
 .main-interface {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__button-log-in-with-google {
+    background: $bgcColor;
+    border: $borderPropertiesWhite;
+    &__text {
+      color: $fontColorMain;
+      @include fontSizeAndLineHeight;
+    }
+  }
+
+  &__option {
+    color: $fontColor;
+    font-size: 8px;
+    text-transform: uppercase;
+  }
+
+  &__container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    margin-top: 11px;
+  }
 
+  &__email-span {
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+
+  &__password-span {
+    margin-top: 2px;
+    margin-bottom: 4px;
+  }
+
+  &__email-input,
+  &__password-input {
+    background: $bgcColor;
+    border: $borderPropertiesWhite;
+    border-radius: 5px;
+    width: 215px;
+    height: 34px;
+    padding-left: 10px;
+  }
+
+  &__floating-label {
+    &-email,
+    &-password {
+      display: none;
+    }
+  }
+
+  &__options-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__checkbox {
+    border: $borderPropertiesWhite;
+    border-radius: 4px;
+    margin-right: 3px;
+    margin-bottom: 4px;
+    margin-top: 14px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__keep-logged-in {
+    font-size: 7px;
+    line-height: 9px;
+    color: $fontColor;
+    width: 110px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+  }
+
+  &__forgot-password {
+    text-decoration: none;
+    font-size: 8px;
+    line-height: 10px;
+    margin-bottom: 1px;
+    margin-top: 14px;
+
+    &__text {
+      color: $fontHighlighted;
+      transition: 0.4s;
+    }
+  }
+
+  &__button-log-in {
+    background: $greenGradient;
+    border: none;
+    margin-bottom: 15px;
+
+    &__text {
+      @include fontSizeAndLineHeight;
+      color: $bgcColor;
+    }
+  }
+
+  &__sign-up {
+    font-size: 8px;
+    line-height: 10px;
+    color: $fontColor;
+
+    &__highlighted {
+      color: $fontHighlighted;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+  }
+}
+
+.label {
+  display: block;
+  width: 100%;
+  @include fontSizeAndLineHeight;
+}
+
+.vector {
+  border: 1px solid $vectorColor;
+  height: 0px;
+  width: 65px;
+
+  &--left {
+    margin-right: 2px;
+  }
+
+  &--right {
+    margin-left: 2px;
+  }
+
+  &--long {
+    width: 214px;
+    margin-bottom: 7px;
+  }
+}
+
+@media (orientation: landscape) {
+  .main-interface {
     &__button-log-in-with-google {
-        background: $bgcColor;
-        border: $borderPropertiesWhite;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        &__text {
-            color: $fontColorMain;
-            @include fontSizeAndLineHeight;
-        }
+      transition: 0.4s;
+      &:hover {
+        cursor: pointer;
+        background: green;
+      }
+      &:hover &__text {
+        color: white;
+      }
+      &__text {
+        font-size: 24px;
+        line-height: 30px;
+        transition: 0.4s;
+      }
     }
 
     &__option {
-        color: $fontColor;
-        font-size: 8px;
-        text-transform: uppercase;
+      font-size: $fontSize;
     }
 
     &__container {
-        display: flex;
-        align-items: center;
-        margin-top: 11px;
+      margin-top: 25px;
     }
 
     &__email-label {
-        margin-top: 8px;
-        margin-bottom: 3px;
+      margin-top: 10px;
     }
 
-    &__password-label {
-        margin-top: 2px;
-        margin-bottom: 4px;
+    &__password-span {
+      margin-top: 11px;
     }
 
     &__email-input,
     &__password-input {
-        background: $bgcColor;
-        border: $borderPropertiesWhite;
-        border-radius: 5px;
-        width: 215px;
-        height: 34px;
-        padding-left: 10px;
+      width: 416px;
+      height: 71px;
+      padding-left: 14px;
+      padding-top: 10px;
+    }
+
+    &__wrapper-email {
+      position: relative;
+    }
+
+    &__wrapper-password {
+      position: relative;
+    }
+
+    &__email-input:focus ~ &__floating-label-email,
+    &__password-input:focus ~ &__floating-label-password,
+    &__email-input:not(:focus):valid ~ &__floating-label-email,
+    &__password-input:not(:focus):valid ~ &__floating-label-password {
+      top: 30%;
+      left: 3.5%;
+      font-family: "Righteous", cursive, sans-serif;
+      font-weight: normal;
+      color: $fontColorMain;
+      font-size: 16px;
     }
 
     &__floating-label {
+      &-email {
+        display: inline-block;
+        position: absolute;
+        color: $fontColor;
+        top: 52%;
+        left: 4.5%;
+        font-size: 14px;
+        font-family: "Righteous", cursive, sans-serif;
+        transition: 0.3s;
+      }
 
-        &-email,
-        &-password {
-            display: none;
-        }
+      &-password {
+        display: inline-block;
+        position: absolute;
+        color: $fontColor;
+        top: 52%;
+        left: 4.5%;
+        font-size: 14px;
+        font-family: "Righteous", cursive, sans-serif;
+        transition: 0.3s;
+      }
     }
 
-    &__box {
-        display: flex;
-        justify-content: flex-end;
+    @keyframes floatingTablesEmail {
+      0% {
+      }
+
+      100% {
+        top: 30%;
+        left: 3.5%;
+        font-family: "Righteous", cursive, sans-serif;
+        font-weight: normal;
+        color: $fontColorMain;
+        font-size: 16px;
+      }
     }
 
+    @keyframes floatingTablesPassword {
+      0% {
+      }
+
+      100% {
+        top: 30%;
+        left: 3.5%;
+        font-family: "Righteous", cursive, sans-serif;
+        font-weight: normal;
+        color: $fontColorMain;
+        font-size: 16px;
+      }
+    }
+
+    ////////////////////////
     &__checkbox {
-        border: $borderPropertiesWhite;
-        border-radius: 4px;
-        margin-right: 3px;
-        margin-bottom: 4px;
-        margin-top: 14px;
-
-        &:hover {
-            cursor: pointer;
-        }
+      width: 18px;
+      height: 19px;
+      margin-bottom: 13px;
+      margin-top: 18px;
+      margin-right: 2px;
     }
 
     &__keep-logged-in {
-        font-size: 7px;
-        line-height: 9px;
-        color: $fontColor;
-        width: 110px;
-        margin-bottom: 7px;
-        margin-top: 15px;
+      width: 236px;
+      height: 17px;
+      @include fontSizeAndLineHeight;
+      margin-bottom: 14px;
+      margin-top: 19px;
+      margin-right: 6px;
+      transition: 0.2s;
     }
-
+    &__checkbox:checked + &__keep-logged-in {
+      color: green;
+    }
     &__forgot-password {
-        text-decoration: none;
-        font-size: 8px;
-        line-height: 10px;
-        margin-bottom: 1px;
-        margin-top: 14px;
-
-        &__text {
-            color: $fontHighlighted;
-        }
+      text-decoration: none;
+      @include fontSizeAndLineHeight;
+      margin-top: 18px;
+      transition: 0.2s;
+      &:hover &__text {
+        color: green;
+      }
     }
 
     &__button-log-in {
-        background: $greenGradient;
-        border: none;
-        margin-bottom: 15px;
+      margin-bottom: 18px;
 
-        &__text {
-            @include fontSizeAndLineHeight;
-            color: $bgcColor;
-        }
-    }
-
-    &__checkbox:checked+&__keep-logged-in {
-        color: green;
+      &__text {
+        font-size: 24px;
+        line-height: 30px;
+        color: #fff;
+      }
     }
 
     &__sign-up {
-        font-size: 8px;
-        line-height: 10px;
-        color: $fontColor;
+      @include fontSizeAndLineHeight;
+      color: $fontColor;
 
-        &__highlighted {
-            color: $fontHighlighted;
-            text-decoration: none;
+      &__highlighted {
+        color: #ec6969;
+        text-decoration: none;
+        &:hover {
+          color: green;
         }
+      }
     }
-}
+  }
 
-.label {
-    display: block;
-    width: 100%;
-    @include fontSizeAndLineHeight;
-}
+  .label {
+    font-size: 24px;
+  }
 
-.vector {
-    border: 1px solid $vectorColor;
-    height: 0px;
-    width: 65px;
+  .vector {
+    width: 127px;
 
     &--left {
-        margin-right: 2px;
+      margin-right: 6px;
     }
 
     &--right {
-        margin-left: 2px;
+      margin-left: 6px;
     }
 
     &--long {
-        width: 214px;
-        margin-bottom: 7px;
+      width: 410px;
+      margin-bottom: 17px;
     }
-}
-
-@media (orientation: landscape) {
-
-    .main-interface {
-        &__button-log-in-with-google {
-
-            &__text {
-                font-size: 24px;
-                line-height: 30px;
-            }
-        }
-
-        &__option {
-            font-size: $fontSize;
-        }
-
-        &__container {
-            margin-top: 25px;
-        }
-
-        &__email-label {
-            margin-top: 10px;
-        }
-
-        &__password-label {
-            margin-top: 11px;
-        }
-
-        &__email-input,
-        &__password-input {
-            width: 416px;
-            height: 71px;
-            padding-left: 14px;
-            padding-top: 10px;
-        }
-
-        // /////////////////
-        // .main-interface__email-input:focus+.floating-label-email {
-        //     animation: floatingTablesEmail .2s linear forwards;
-        // }
-
-
-        // .main-interface__password-input:focus+.floating-label-password {
-        //     animation: floatingTablesPassword .2s linear both;
-        // }
-
-        &__box-email {
-            position: relative;
-        }
-
-        &__box-password {
-            position: relative;
-        }
-
-        &__email-input:focus~&__floating-label-email,
-        &__password-input:focus~&__floating-label-password {
-            top: 30%;
-            left: 3.5%;
-            font-family: 'Righteous', cursive,
-                sans-serif;
-            font-weight: normal;
-            color: $fontColorMain;
-            font-size: 16px;
-        }
-
-        &__email-input:not(:focus):valid~&__floating-label-email,
-        &__password-input:not(:focus):valid~&__floating-label-password {
-            top: 30%;
-            left: 3.5%;
-            font-family: 'Righteous', cursive,
-                sans-serif;
-            font-weight: normal;
-            color: $fontColorMain;
-            font-size: 16px;
-        }
-
-
-
-        &__floating-label {
-
-            &-email {
-                display: inline-block;
-                position: absolute;
-                top: 52%;
-                left: 4.5%;
-                font-size: 14px;
-                font-family: 'Righteous', cursive,
-                    sans-serif;
-                transition: .3s;
-            }
-
-            &-password {
-                display: inline-block;
-                position: absolute;
-                top: 52%;
-                left: 4.5%;
-                font-size: 14px;
-                font-family: 'Righteous', cursive,
-                    sans-serif;
-                transition: .3s;
-            }
-        }
-
-        @keyframes floatingTablesEmail {
-            0% {}
-
-            100% {
-                top: 30%;
-                left: 3.5%;
-                font-family: 'Righteous', cursive,
-                    sans-serif;
-                font-weight: normal;
-                color: $fontColorMain;
-                font-size: 16px;
-            }
-        }
-
-        @keyframes floatingTablesPassword {
-            0% {}
-
-            100% {
-                top: 30%;
-                left: 3.5%;
-                font-family: 'Righteous', cursive,
-                    sans-serif;
-                font-weight: normal;
-                color: $fontColorMain;
-                font-size: 16px;
-            }
-        }
-
-        ////////////////////////
-        &__checkbox {
-            width: 18px;
-            height: 19px;
-            margin-bottom: 13px;
-            margin-top: 18px;
-            margin-right: 2px;
-        }
-
-        &__keep-logged-in {
-            width: 236px;
-            height: 17px;
-            @include fontSizeAndLineHeight;
-            margin-bottom: 14px;
-            margin-top: 19px;
-            margin-right: 6px;
-        }
-
-        &__forgot-password {
-            text-decoration: none;
-            @include fontSizeAndLineHeight;
-            margin-top: 18px;
-        }
-
-        &__button-log-in {
-            margin-bottom: 18px;
-
-            &__text {
-                font-size: 24px;
-                line-height: 30px;
-                color: #FFF;
-            }
-        }
-
-        &__sign-up {
-            @include fontSizeAndLineHeight;
-            color: $fontColor;
-
-            &__highlighted {
-                color: #EC6969;
-                text-decoration: none;
-            }
-        }
-    }
-
-    .label {
-        font-size: 24px;
-    }
-
-    .vector {
-        width: 127px;
-
-        &--left {
-            margin-right: 6px;
-        }
-
-        &--right {
-            margin-left: 6px;
-        }
-
-        &--long {
-            width: 410px;
-            margin-bottom: 17px;
-        }
-    }
+  }
 }

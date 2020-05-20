@@ -1,43 +1,42 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .background {
-    background: $greenGradient;
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  background: $greenGradient;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .text {
-    font-family: 'Righteous', cursive,
-        sans-serif;
-    font-weight: normal;
-    color: $fontColorMain;
+  font-family: "Righteous", cursive, sans-serif;
+  font-weight: normal;
+  color: $fontColorMain;
 }
 
 .wrapper {
-    height: 548px;
-    width: 295px;
-    background-color: $bgcColor;
+  height: 548px;
+  width: 295px;
+  background-color: $bgcColor;
 }
 
 @media (orientation: landscape) {
-    .wrapper {
-        width: calc(622px + 860px);
-        height: 746px;
-        display: flex;
+  .wrapper {
+    width: calc(622px + 860px);
+    height: 746px;
+    display: flex;
 
-        &__left {
-            width: 622px;
-        }
-
-        &__right {
-            width: 860px;
-            height: 500px;
-        }
+    &__rectangle-left {
+      width: 622px;
     }
+
+    &__rectangle-left {
+      width: 860px;
+      height: 500px;
+    }
+  }
 }

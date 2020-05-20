@@ -20,7 +20,7 @@
 }
 
 .text {
-  font-family: 'Righteous', cursive, sans-serif;
+  font-family: "Righteous", cursive, sans-serif;
   font-weight: normal;
   color: #4D4D4D;
 }
@@ -39,10 +39,10 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .wrapper__left {
+  .wrapper__rectangle-left {
     width: 622px;
   }
-  .wrapper__right {
+  .wrapper__rectangle-left {
     width: 860px;
     height: 500px;
   }
@@ -149,10 +149,6 @@
   border: 1px solid #E1E1E1;
 }
 
-.main-interface__button-log-in-with-google:hover {
-  cursor: pointer;
-}
-
 .main-interface__button-log-in-with-google__text {
   color: #4D4D4D;
   font-size: 14px;
@@ -175,12 +171,12 @@
   margin-top: 11px;
 }
 
-.main-interface__email-label {
+.main-interface__email-span {
   margin-top: 8px;
   margin-bottom: 3px;
 }
 
-.main-interface__password-label {
+.main-interface__password-span {
   margin-top: 2px;
   margin-bottom: 4px;
 }
@@ -198,7 +194,7 @@
   display: none;
 }
 
-.main-interface__box {
+.main-interface__options-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,6 +234,8 @@
 
 .main-interface__forgot-password__text {
   color: #EC6969;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .main-interface__button-log-in {
@@ -253,10 +251,6 @@
   color: #FFF;
 }
 
-.main-interface__checkbox:checked + .main-interface__keep-logged-in {
-  color: green;
-}
-
 .main-interface__sign-up {
   font-size: 8px;
   line-height: 10px;
@@ -266,6 +260,8 @@
 .main-interface__sign-up__highlighted {
   color: #EC6969;
   text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .label {
@@ -295,9 +291,22 @@
 }
 
 @media (orientation: landscape) {
+  .main-interface__button-log-in-with-google {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .main-interface__button-log-in-with-google:hover {
+    cursor: pointer;
+    background: green;
+  }
+  .main-interface__button-log-in-with-google:hover .main-interface__button-log-in-with-google__text {
+    color: white;
+  }
   .main-interface__button-log-in-with-google__text {
     font-size: 24px;
     line-height: 30px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
   .main-interface__option {
     font-size: 14px;
@@ -308,7 +317,7 @@
   .main-interface__email-label {
     margin-top: 10px;
   }
-  .main-interface__password-label {
+  .main-interface__password-span {
     margin-top: 11px;
   }
   .main-interface__email-input, .main-interface__password-input {
@@ -317,26 +326,19 @@
     padding-left: 14px;
     padding-top: 10px;
   }
-  .main-interface__box-email {
+  .main-interface__wrapper-email {
     position: relative;
   }
-  .main-interface__box-password {
+  .main-interface__wrapper-password {
     position: relative;
   }
   .main-interface__email-input:focus ~ .main-interface__floating-label-email,
-  .main-interface__password-input:focus ~ .main-interface__floating-label-password {
-    top: 30%;
-    left: 3.5%;
-    font-family: 'Righteous', cursive, sans-serif;
-    font-weight: normal;
-    color: #4D4D4D;
-    font-size: 16px;
-  }
+  .main-interface__password-input:focus ~ .main-interface__floating-label-password,
   .main-interface__email-input:not(:focus):valid ~ .main-interface__floating-label-email,
   .main-interface__password-input:not(:focus):valid ~ .main-interface__floating-label-password {
     top: 30%;
     left: 3.5%;
-    font-family: 'Righteous', cursive, sans-serif;
+    font-family: "Righteous", cursive, sans-serif;
     font-weight: normal;
     color: #4D4D4D;
     font-size: 16px;
@@ -344,22 +346,24 @@
   .main-interface__floating-label-email {
     display: inline-block;
     position: absolute;
+    color: #999;
     top: 52%;
     left: 4.5%;
     font-size: 14px;
-    font-family: 'Righteous', cursive, sans-serif;
-    -webkit-transition: .3s;
-    transition: .3s;
+    font-family: "Righteous", cursive, sans-serif;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   .main-interface__floating-label-password {
     display: inline-block;
     position: absolute;
+    color: #999;
     top: 52%;
     left: 4.5%;
     font-size: 14px;
-    font-family: 'Righteous', cursive, sans-serif;
-    -webkit-transition: .3s;
-    transition: .3s;
+    font-family: "Righteous", cursive, sans-serif;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   @-webkit-keyframes floatingTablesEmail {
     0% {
@@ -367,7 +371,7 @@
     100% {
       top: 30%;
       left: 3.5%;
-      font-family: 'Righteous', cursive, sans-serif;
+      font-family: "Righteous", cursive, sans-serif;
       font-weight: normal;
       color: #4D4D4D;
       font-size: 16px;
@@ -379,7 +383,7 @@
     100% {
       top: 30%;
       left: 3.5%;
-      font-family: 'Righteous', cursive, sans-serif;
+      font-family: "Righteous", cursive, sans-serif;
       font-weight: normal;
       color: #4D4D4D;
       font-size: 16px;
@@ -391,7 +395,7 @@
     100% {
       top: 30%;
       left: 3.5%;
-      font-family: 'Righteous', cursive, sans-serif;
+      font-family: "Righteous", cursive, sans-serif;
       font-weight: normal;
       color: #4D4D4D;
       font-size: 16px;
@@ -403,7 +407,7 @@
     100% {
       top: 30%;
       left: 3.5%;
-      font-family: 'Righteous', cursive, sans-serif;
+      font-family: "Righteous", cursive, sans-serif;
       font-weight: normal;
       color: #4D4D4D;
       font-size: 16px;
@@ -424,12 +428,22 @@
     margin-bottom: 14px;
     margin-top: 19px;
     margin-right: 6px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .main-interface__checkbox:checked + .main-interface__keep-logged-in {
+    color: green;
   }
   .main-interface__forgot-password {
     text-decoration: none;
     font-size: 14px;
     line-height: 17px;
     margin-top: 18px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .main-interface__forgot-password:hover .main-interface__forgot-password__text {
+    color: green;
   }
   .main-interface__button-log-in {
     margin-bottom: 18px;
@@ -437,7 +451,7 @@
   .main-interface__button-log-in__text {
     font-size: 24px;
     line-height: 30px;
-    color: #FFF;
+    color: #fff;
   }
   .main-interface__sign-up {
     font-size: 14px;
@@ -445,8 +459,11 @@
     color: #999;
   }
   .main-interface__sign-up__highlighted {
-    color: #EC6969;
+    color: #ec6969;
     text-decoration: none;
+  }
+  .main-interface__sign-up__highlighted:hover {
+    color: green;
   }
   .label {
     font-size: 24px;
